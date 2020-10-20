@@ -19,7 +19,7 @@ _____/\\\\\\\\\\\___        _______/\\\\\______        __/\\\________/\\\_      
          ___________         _______\/////////__        _______\///________        _\///________\///__        ____\/////////_____         ___________ 
 CT-HU.COM
 */
-pragma solidity ^0.6.2;
+pragma solidity ^0.7.0;
 
 // SPDX-License-Identifier: UNLICENSED
 
@@ -165,7 +165,7 @@ contract Ownable is Context {
     /**
      * @dev Initializes the contract setting the deployer as the initial owner.
      */
-    constructor () internal {
+    constructor () {
         address msgSender = _msgSender();
         _owner = msgSender;
         emit OwnershipTransferred(address(0), msgSender);
@@ -230,7 +230,7 @@ contract ERC20 is Context, IERC20 {
      * All three of these values are immutable: they can only be set once during
      * construction.
      */
-    constructor (string memory name, string memory symbol) public {
+    constructor (string memory name, string memory symbol) {
         _name = name;
         _symbol = symbol;
         _decimals = 18;

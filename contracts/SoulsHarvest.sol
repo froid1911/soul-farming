@@ -100,7 +100,7 @@
 **/
 
 
-pragma solidity ^0.7.1;
+pragma solidity ^0.7.0;
 
 // SPDX-License-Identifier: UNLICENSED
 
@@ -232,7 +232,7 @@ constructor(address _cthu, address _souls) {
     function buy(uint256 amount) external {
         require(souls.balanceOf(msg.sender) >= amount);
             uint cthuToRecieve = amount / 100;
-        require(cthu.balanceOf(address(this)) >= cthuToReceive);
+        require(cthu.balanceOf(address(this)) >= cthuToRecieve);
         // @dev need to be approved via the UI
         souls.transferFrom(msg.sender, address(this), amount);
         soulAddressBurn.burnAmountOfTokensFromTheCallerBECAREFUL(amount);

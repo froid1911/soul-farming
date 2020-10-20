@@ -1,0 +1,26 @@
+{
+  "name": "soul-farming",
+  "version": "0.0.1",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test",
+    "deploy:ganache": "truffle migrate --reset --network=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/froid1911/soul-farming.git"
+  },
+  "author": "Frank",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/froid1911/soul-farming/issues"
+  },
+  "homepage": "https://github.com/froid1911/soul-farming#readme",
+  "devDependencies": {
+    "truffle": "^5.1.49"
+  }
+}
