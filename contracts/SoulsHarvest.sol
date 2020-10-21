@@ -235,8 +235,8 @@ constructor(address _cthu, address _souls) {
         require(cthu.balanceOf(address(this)) >= cthuToRecieve);
         // @dev need to be approved via the UI
         souls.transferFrom(msg.sender, address(this), amount);
-        soulAddressBurn.burnAmountOfTokensFromTheCallerBECAREFUL(amount);
-        cthu.transfer(msg.sender, amount);
+        // soulAddressBurn.burnAmountOfTokensFromTheCallerBECAREFUL(amount);
+        cthu.transfer(msg.sender, cthuToRecieve); // @TODO: This should be chtuToReceive
         emit Bought(msg.sender, amount);
     }
 }

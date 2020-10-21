@@ -53151,12 +53151,12 @@
         }
       },
       "links": {},
-      "address": "0x6baa92625c406047C8ae09Fc66075a7BB738e815",
-      "transactionHash": "0xcfc252756a7ea3fbb609490d5eaf20835ad9c07bcff7d4668142e10e90ab3bdf"
+      "address": "0x525F2c7f47E95B0C9C5d67762d7830c97Fb1aaa8",
+      "transactionHash": "0xa9aa7514b0bf098bfc1a654d3f103c01a66688b7433fa15f72a2bee69cdbd4c8"
     }
   },
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-20T17:36:58.962Z",
+  "updatedAt": "2020-10-21T16:10:40.868Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
