@@ -100,7 +100,7 @@
 **/
 
 
-pragma solidity ^0.7.0;
+pragma solidity ^0.7.1;
 
 // SPDX-License-Identifier: UNLICENSED
 
@@ -235,8 +235,8 @@ constructor(address _cthu, address _souls) {
         require(cthu.balanceOf(address(this)) >= cthuToRecieve);
         // @dev need to be approved via the UI
         souls.transferFrom(msg.sender, address(this), amount);
-        // soulAddressBurn.burnAmountOfTokensFromTheCallerBECAREFUL(amount);
-        cthu.transfer(msg.sender, cthuToRecieve); // @TODO: This should be chtuToReceive
+        soulAddressBurn.burnAmountOfTokensFromTheCallerBECAREFUL(amount);
+        cthu.transfer(msg.sender, cthuToRecieve);
         emit Bought(msg.sender, amount);
     }
 }
