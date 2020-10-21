@@ -22,7 +22,7 @@ contract("SoulsHarvest", accounts => {
         await deployedCTHU.transfer.sendTransaction(deployedSOULHARVEST.address, (1 * (10 ** 18)).toString());
     })
 
-    it("allows to buy 1 CHTU Token for 100 Soul Token", async () => {
+    it("allows to exchange 1 CHTU Token for 100 Souls Token", async () => {
 
         // check balances before buy action
         const balanceBeforeSwapSouls = await deployedSOULS.balanceOf.call(accountWithSouls);
