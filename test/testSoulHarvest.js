@@ -1,9 +1,8 @@
-
 const CTHU = artifacts.require("BaseToken");
 const SOULS = artifacts.require("Souls");
 const SOULHARVEST = artifacts.require("SoulsHarvest");
 
-contract("SoulsHarvest", accounts => {
+contract("SoulHarvester", accounts => {
 
     let deployedCTHU;
     let deployedSOULS;
@@ -21,6 +20,18 @@ contract("SoulsHarvest", accounts => {
         // give soulharvest contract some chtu tokens
         await deployedCTHU.transfer.sendTransaction(deployedSOULHARVEST.address, (1 * (10 ** 18)).toString());
     })
+
+    it("allow to see balanace of chtu token to user", () => {
+        //chtu balanceOf
+    });
+
+    it("allow  to see  balance of staked souls token to user", () => {
+        //souls balanceOf
+    });
+
+
+
+
 
     it("allows to exchange 1 CHTU Token for 100 Souls Token", async () => {
 
