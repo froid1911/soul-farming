@@ -29,6 +29,11 @@ contract("Souls", (accounts) => {
     })
 
     it("allows to withdraw staked chtu from souls contracts", async () => {
+        // generate some blocks 
+        await web3.eth.sendTransaction({ to: accounts[1], from: accounts[0] })
+        await web3.eth.sendTransaction({ to: accounts[1], from: accounts[0] })
+        await web3.eth.sendTransaction({ to: accounts[1], from: accounts[0] })
+        await web3.eth.sendTransaction({ to: accounts[1], from: accounts[0] })
         const response = await deployedSOULS.withdraw.sendTransaction("10000000000000000000000000");
         const balanceOfUser = await deployedCTHU.balanceOf.call(accountWithSoulsAndCthu);
         assert.equal(balanceOfUser.toString(), "10000000000000000000000000");
@@ -40,12 +45,6 @@ contract("Souls", (accounts) => {
     })
 
     it("provides function which returns available rewards balance", async () => {
-        // generate some blocks
-        await web3.eth.sendTransaction({ to: accounts[1], from: accounts[0] })
-        await web3.eth.sendTransaction({ to: accounts[1], from: accounts[0] })
-        await web3.eth.sendTransaction({ to: accounts[1], from: accounts[0] })
-        await web3.eth.sendTransaction({ to: accounts[1], from: accounts[0] })
-
         // get actual rewards available
         const balanceOfUser = await deployedSOULS.myRewardsBalance.call(accountWithSoulsAndCthu);
         assert.notEqual(balanceOfUser.toString(), "0"); // why this returns 0?
