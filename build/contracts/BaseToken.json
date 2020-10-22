@@ -73136,12 +73136,12 @@
         }
       },
       "links": {},
-      "address": "0x3b2Ff49827Da6f42FfC2689e66A471824dd17F28",
-      "transactionHash": "0xf4dbabe8dd6d788f767719dbc2428ef7c167f5c23abc028ea18542bbc6adb6e8"
+      "address": "0x2fF712D687a595870cc85D5D8e9B4b7085FfBdd7",
+      "transactionHash": "0x6f2a67723f15306ad2af8e4685a0862a6871efdb14b770944c03f76f5f6c2db2"
     }
   },
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-10-21T16:10:40.822Z",
+  "updatedAt": "2020-10-22T07:28:19.397Z",
   "networkType": "ethereum",
   "devdoc": {
     "author": "Vittorio Minacori (https://github.com/vittominacori)",
